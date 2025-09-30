@@ -1,0 +1,72 @@
+/* Basic reset and font */
+html, body, #root { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #fff; }
+
+/* Page layout */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #05040a 0%, #071028 100%);
+  padding: 20px;
+}
+
+/* Top nav */
+.nav {
+  position: fixed;
+  left: 24px;
+  top: 18px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  z-index: 30;
+  pointer-events: auto;
+}
+
+/* Hero area */
+.hero {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+}
+
+.scene-wrap { width: 100%; height: 68vh; border-radius: 12px; overflow: hidden; box-shadow: 0 14px 40px rgba(2,6,23,0.6); position: relative; cursor: pointer; }
+.canvas { width: 100%; height: 100%; display: block; }
+
+/* Overlay text on right */
+.overlay {
+  position: relative;
+  padding: 12px 16px;
+}
+.overlay h1 { margin: 6px 0; font-size: 32px; line-height: 1.05; }
+.overlay p { margin: 6px 0 16px 0; color: rgba(255,255,255,0.85); }
+
+/* Small hint under canvas */
+.scene-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+  z-index: 5;
+}
+
+/* Projects section */
+.projects { margin: 40px 28px; padding-bottom: 120px; }
+.projects h2 { font-size: 20px; margin-bottom: 14px; }
+.project-list { display: flex; gap: 12px; flex-wrap: wrap; }
+.project {
+  background: rgba(255,255,255,0.04);
+  padding: 14px;
+  border-radius: 10px;
+  min-width: 240px;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.6);
+}
+.project small { color: rgba(255,255,255,0.8); }
+
+/* Responsive */
+@media (max-width: 920px) {
+  .hero { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+  .scene-wrap { height: 56vh; }
+}
